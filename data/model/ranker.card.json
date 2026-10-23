@@ -1,0 +1,194 @@
+{
+  "name": "gradient_boosting",
+  "feature_names": [
+    "lang=c",
+    "lang=cpp",
+    "lang=java",
+    "lang=python",
+    "expected=;",
+    "expected=)",
+    "expected=]",
+    "expected=}",
+    "expected={",
+    "expected=,",
+    "expected=:",
+    "expected=other",
+    "expected=none",
+    "category=missing_semicolon",
+    "category=missing_paren",
+    "category=missing_brace",
+    "category=missing_comma",
+    "category=missing_colon",
+    "category=unexpected_token",
+    "category=incomplete_expression",
+    "category=malformed_declaration",
+    "category=indentation",
+    "category=unknown",
+    "found=ident",
+    "found=keyword",
+    "found=number",
+    "found=string",
+    "found=op",
+    "found=punct",
+    "found=none",
+    "found=other",
+    "found_is_type_kw",
+    "reported_at_eof",
+    "rep_paren_start",
+    "rep_brace_start",
+    "global_unmatched_brace",
+    "global_paren",
+    "global_bracket",
+    "rep_col_at_line_start",
+    "rep_indent",
+    "F1_dist",
+    "code_lines_between",
+    "is_reported",
+    "blank",
+    "comment_only",
+    "preproc",
+    "in_string",
+    "last_kind=;",
+    "last_kind={",
+    "last_kind=}",
+    "last_kind=,",
+    "last_kind=:",
+    "last_kind=)",
+    "last_kind=]",
+    "last_kind=(",
+    "last_kind=ident",
+    "last_kind=number",
+    "last_kind=string",
+    "last_kind=keyword",
+    "last_kind=op_binary",
+    "last_kind=op_other",
+    "last_kind=none",
+    "last_kind=other",
+    "first_kind=kw_type",
+    "first_kind=kw_control",
+    "first_kind=kw_other",
+    "first_kind=ident",
+    "first_kind=}",
+    "first_kind=other",
+    "first_kind=none",
+    "ntok",
+    "paren_net",
+    "bracket_net",
+    "brace_net",
+    "paren_end",
+    "bracket_end",
+    "brace_start",
+    "brace_end",
+    "F6_looks_complete",
+    "needs_colon",
+    "is_block_header",
+    "next_first=kw_type",
+    "next_first=kw_control",
+    "next_first=kw_other",
+    "next_first=ident",
+    "next_first=}",
+    "next_first=other",
+    "next_first=none",
+    "prev_last=;",
+    "prev_last={",
+    "prev_last=}",
+    "prev_last=,",
+    "prev_last=:",
+    "prev_last=other",
+    "prev_last=none",
+    "indent",
+    "indent_minus_next",
+    "indent_minus_prev",
+    "indent_minus_rep",
+    "ends_with_expected",
+    "opens_unmatched_brace",
+    "open_indent",
+    "next_indent_minus_open",
+    "dedent_while_open",
+    "line_len"
+  ],
+  "feature_version": 2,
+  "trained_at": "2026-10-19T10:21:24Z",
+  "sklearn_version": "1.9.1",
+  "validation": {
+    "candidates": {
+      "random_forest": {
+        "top1": 0.9835466179159049,
+        "top3": 0.9890310786106032,
+        "mrr": 0.9862888482632541,
+        "n": 547,
+        "fit_seconds": 6.5
+      },
+      "gradient_boosting": {
+        "top1": 0.9872029250457038,
+        "top3": 0.9890310786106032,
+        "mrr": 0.9881170018281535,
+        "n": 547,
+        "fit_seconds": 16.5
+      }
+    },
+    "selected": "gradient_boosting",
+    "rule_based_top1": 0.926873857404022
+  },
+  "n_train_samples": 2403,
+  "preferred_strategy": "ml",
+  "dataset": {
+    "seed": 7,
+    "n_samples": 3439,
+    "split_counts": {
+      "train": 2403,
+      "val": 547,
+      "test": 489
+    }
+  },
+  "top_features": [
+    [
+      "is_reported",
+      0.5146
+    ],
+    [
+      "code_lines_between",
+      0.168
+    ],
+    [
+      "F1_dist",
+      0.1229
+    ],
+    [
+      "global_unmatched_brace",
+      0.0697
+    ],
+    [
+      "dedent_while_open",
+      0.0425
+    ],
+    [
+      "rep_col_at_line_start",
+      0.0099
+    ],
+    [
+      "indent_minus_prev",
+      0.0098
+    ],
+    [
+      "lang=python",
+      0.0086
+    ],
+    [
+      "first_kind=kw_type",
+      0.0071
+    ],
+    [
+      "category=unexpected_token",
+      0.0057
+    ],
+    [
+      "ends_with_expected",
+      0.0055
+    ],
+    [
+      "category=missing_semicolon",
+      0.005
+    ]
+  ]
+}

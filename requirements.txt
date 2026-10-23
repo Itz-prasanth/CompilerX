@@ -1,0 +1,17 @@
+# Core (numpy, scikit-learn, joblib)
+numpy>=1.26
+# Pinned to one minor line, not just a floor: GradientBoostingClassifier/RandomForest
+# models are persisted with joblib, and scikit-learn does not guarantee pickle
+# compatibility across versions (its own docs say so). An unbounded ">=1.4" let pip
+# resolve a newer sklearn than the one the committed data/model/ranker.joblib was
+# trained with, so unpickling hit scikit-learn's internal compiled loss module and
+# failed with "ModuleNotFoundError: No module named '_loss'". If you bump this pin,
+# retrain and recommit the model in the same environment (scripts/train_model.sh).
+scikit-learn>=1.9,<1.10
+joblib>=1.3
+# API server (FastAPI app: backend/fastapi_app.py - NOT executable in the authoring sandbox; stdlib server works without these)
+fastapi>=0.110
+uvicorn>=0.29
+pydantic>=2.6
+# Tests (the suite also runs without pytest via scripts/run_tests.py)
+pytest>=8.0
